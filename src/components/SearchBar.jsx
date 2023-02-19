@@ -1,15 +1,19 @@
 import React from "react";
 
-const SearchBar = ({ value }) => {
+import "./SearchBar.scss";
+
+const SearchBar = ({ searchValue, onSearchValueChange }) => {
   const handleChange = (event) => {
-    setSearchValue(event.target.value);
+    const value = event.target.value;
+    onSearchValueChange(value);
+    // setSearchValue(value);
   };
 
   return (
-    <div>
+    <div className="search-input-container">
       <input
         className="search-input"
-        value={value}
+        value={searchValue}
         onChange={handleChange}
         placeholder="Search for movies..."
       ></input>

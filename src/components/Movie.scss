@@ -3,7 +3,10 @@
   width: 275px;
   background: #c1c1c1;
   box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
-  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .poster-image {
     width: 100%;
@@ -12,8 +15,32 @@
   }
   .movie-info {
     padding: 20px;
+    text-align: center;
+
+    h3 {
+      font-weight: bold;
+    }
   }
   .release-year {
     padding-top: 10px;
+    text-align: center;
+  }
+
+  .detail-card {
+    padding: 30px;
+    line-height: 20px;
+
+    span {
+      font-weight: bold;
+    }
+
+    p {
+      padding-bottom: 10px;
+    }
+  }
+
+  .detail-button {
+    margin-top: auto;
+    margin-bottom: 20px;
   }
 }
